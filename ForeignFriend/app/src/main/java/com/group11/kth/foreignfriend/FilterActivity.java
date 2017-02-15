@@ -53,7 +53,7 @@ public class FilterActivity extends AppCompatActivity {
             @Override
             public void onClick(View view){
                 AlertDialog.Builder mbuilder = new AlertDialog.Builder(FilterActivity.this);
-                mbuilder.setTitle("COURESES");
+                mbuilder.setTitle("FIELDS");
                 mbuilder.setMultiChoiceItems(fieldsarray, checkedfields, new DialogInterface.OnMultiChoiceClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int pos, boolean isChecked) {
@@ -98,7 +98,72 @@ public class FilterActivity extends AppCompatActivity {
                         for (int i =0; i<checkedfields.length; i++){
                             checkedfields[i]=false;
                             fieldslist.clear();
-                            fieldsSelected.setText("NO COURSES SELECTED");
+                            fieldsSelected.setText("No fields selected");
+
+                        }
+                    }
+                });
+                AlertDialog mdialog = mbuilder.create();
+                mdialog.show();
+            }
+        });     //fieldslistener done
+
+
+
+        //..................................................................
+        //                  SAME STUFF FOR COURSES...
+        //...................................................................
+
+        courses.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                AlertDialog.Builder mbuilder = new AlertDialog.Builder(FilterActivity.this);
+                mbuilder.setTitle("COURSES");
+                mbuilder.setMultiChoiceItems(coursearray, checkedcourses, new DialogInterface.OnMultiChoiceClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int pos, boolean isChecked) {
+
+                        //When user selects item... add OR remove
+                        if(isChecked){
+                            if(! courselist.contains(pos)){
+                                courselist.add(pos);
+                            }
+                        }else if(courselist.contains(pos)){
+                            courselist.remove(Integer.valueOf(pos));
+                        }
+                    }
+                });
+
+                //
+                mbuilder.setCancelable(false);
+                mbuilder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        String item = "";
+                        for (int i=0;i< courselist.size(); i++){
+                            item = item+"   "+coursearray[courselist.get(i)];
+                            //add comma, tab, new line or somehting here?
+                        }
+                        courseSelected.setText(item);
+                    }
+                });
+
+                //Dismiss button
+                mbuilder.setNegativeButton("Dissmiss", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                });
+
+                //Clear all selections
+                mbuilder.setNeutralButton("Clear all", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        for (int i =0; i<checkedcourses.length; i++){
+                            checkedcourses[i]=false;
+                            courselist.clear();
+                            courseSelected.setText("No fields selected");
 
                         }
                     }
@@ -107,6 +172,8 @@ public class FilterActivity extends AppCompatActivity {
                 mdialog.show();
             }
         });
+
+
 
     }
 

@@ -1,9 +1,11 @@
 package com.group11.kth.foreignfriend;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.Toast;
 
 import com.facebook.*;
@@ -113,4 +115,9 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
     }
+    public void openMap(View view){
+        Intent intent = new Intent(MainActivity.this, MapsActivity.class);
+        startActivity(intent);
+    }
+
 }

@@ -93,6 +93,8 @@
 
     <string name="pref_title_vibrate">Vibrate</string>
 
+    <string name="title_activity_maps">Map</string>
+
     <!-- Strings for the filterActivity-->
 
     <string-array name ="courses">
@@ -117,8 +119,5 @@
         <item>Field e</item>
         <item>FIELD F</item>
         <item>FIELD G</item>
-
     </string-array>
-
-
 </resources>
