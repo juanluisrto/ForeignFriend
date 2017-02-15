@@ -1,0 +1,23 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <ListPreference
+        android:key="about_help"/>
+
+    <Preference android:title="FAQ">
+        <intent android:action=""/>
+
+    </Preference>
+
+    <Preference android:title="Contact us">
+        <intent android:action=""/>
+    </Preference>
+
+    <Preference android:title="Terms and Privacy Policy">
+        <intent android:action=""/>
+    </Preference>
+
+    <Preference android:title="About">
+        <intent android:action=""/>
+    </Preference>
+</PreferenceScreen>
