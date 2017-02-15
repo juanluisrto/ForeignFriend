@@ -16,7 +16,45 @@
     </string>
     <string name="facebook_app_id">1816308978618100</string>
 
-    <string name="title_activity_fullscreen">FullscreenActivity</string>
-    <string name="dummy_button">Dummy Button</string>
-    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Strings related to Settings -->
+
+    <string name="pref_header_general">General</string>
+    <string name="pref_header_help">About &amp; Help</string>
+    <string-array name="pref_language_titles">
+        <item>English</item>
+        <item>French</item>
+        <item>Spanish</item>
+        <item>Swedish</item>
+    </string-array>
+    <string-array name="pref_language_values">
+        <item>en</item>
+        <item>fr</item>
+        <item>sp</item>
+        <item>sw</item>
+    </string-array>
+    <string-array name="pref_themes_titles">
+        <item>Default</item>
+    </string-array>
+    <string-array name="pref_themes_values">
+        <item>df</item>
+    </string-array>
+
+    <string name="pref_title_display_name">Display Name</string>
+    <string name="pref_header_about_help">About &amp; Help</string>
+    <string name="pref_header_themes">Themes</string>
+    <string name="pref_header_language">Language</string>
+
+
+    <string name="pref_title_vibrate">Vibrate</string>
+    <string name="delete_account_title">Delete Account</string>
+    <string name="delete_account_ok">Yes</string>
+    <string name="delete_account_no">No</string>
+    <string name="delete_account_message">Delete the account</string>
+
+    <!-- strings related to the student online profile -->
+    <string name="student_online_name">Juan Louis</string>
+    <string name="email_subject">Mail from ForeignFriend</string>
+
 </resources>
