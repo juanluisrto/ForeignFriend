@@ -3,11 +3,16 @@
     <!-- These settings headers are only used on tablets. -->
 
     <header
+<<<<<<< HEAD
         android:fragment="com.group11.kth.foreignfriend.SettingsActivity$GeneralPreferenceFragment"
+=======
+        android:fragment="com.group11.kth.foreignfriend.FilterActivity$GeneralPreferenceFragment"
+>>>>>>> origin/master
         android:icon="@drawable/ic_info_black_24dp"
         android:title="@string/pref_header_general" />
 
     <header
+<<<<<<< HEAD
         android:fragment="com.group11.kth.foreignfriend.SettingsActivity$ThemesPreferenceFragment"
         android:icon="@drawable/ic_notifications_black_24dp"
         android:title="@string/pref_header_themes" />
@@ -21,5 +26,15 @@
         android:fragment="com.group11.kth.foreignfriend.SettingsActivity$AboutHelpPreferenceFragment"
         android:icon="@drawable/ic_sync_black_24dp"
         android:title="@string/pref_header_about_help" />
+=======
+        android:fragment="com.group11.kth.foreignfriend.FilterActivity$NotificationPreferenceFragment"
+        android:icon="@drawable/ic_notifications_black_24dp"
+        android:title="@string/pref_header_notifications" />
+
+    <header
+        android:fragment="com.group11.kth.foreignfriend.FilterActivity$DataSyncPreferenceFragment"
+        android:icon="@drawable/ic_sync_black_24dp"
+        android:title="@string/pref_header_data_sync" />
+>>>>>>> origin/master
 
 </preference-headers>
