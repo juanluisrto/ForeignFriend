@@ -115,11 +115,10 @@ public class LoginActivity extends AppCompatActivity {
                         else{
                             Toast.makeText(LoginActivity.this, "successful", Toast.LENGTH_SHORT).show();
 
-<<<<<<< HEAD:app/src/main/java/com/group11/kth/foreignfriend/LoginActivity.java
-                        }
-=======
 
->>>>>>> origin/master:ForeignFriend/app/src/main/java/com/group11/kth/foreignfriend/MainActivity.java
+                        }
+
+
                         // ...
                     }
                 });
