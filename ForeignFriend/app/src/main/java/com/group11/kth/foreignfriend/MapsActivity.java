@@ -61,7 +61,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         LatLng student2 = new LatLng(59.347970, 18.068914);
         LatLng student3 = new LatLng(59.349006, 18.074619);
         LatLng student4 = new LatLng(59.346477, 18.076880);
-        mMap.setMyLocationEnabled(true);
+       // mMap.setMyLocationEnabled(true);
         mMap.addMarker(new MarkerOptions().position(student1).title("Student_1"));
         mMap.addMarker(new MarkerOptions().position(student2).title("Student_2"));
         mMap.addMarker(new MarkerOptions().position(student3).title("Student_3"));
