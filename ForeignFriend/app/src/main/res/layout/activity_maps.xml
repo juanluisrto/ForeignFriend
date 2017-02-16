@@ -31,13 +31,16 @@ android:layout_height="match_parent">
 
        tools:context="com.group11.kth.foreignfriend.MapsActivity" />
 
-   <android.support.design.widget.BottomNavigationView
-        android:id="@+id/bottomNavigationView"
-        android:layout_gravity="bottom"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        design:menu="@menu/menu_navigation" />
+
+
+
+  <android.support.design.widget.BottomNavigationView
+       android:id="@+id/bottomNavigationView"
+       android:layout_gravity="bottom"
+       android:layout_width="match_parent"
+       android:layout_height="0dp"
+       android:layout_weight="1"
+       design:menu="@menu/menu_navigation" />
 
   </LinearLayout>
 

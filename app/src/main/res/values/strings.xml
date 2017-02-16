@@ -128,4 +128,10 @@
     <string name="profile">profile</string>
 
 
+
+
+    <!-- String for header colour-->
+    <color name="white">#FFFFFF</color>
+
+
 </resources>
