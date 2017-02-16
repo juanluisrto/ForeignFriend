@@ -39,12 +39,14 @@ public class StudentOnlineActivity extends AppCompatActivity implements View.OnC
                     case R.id.profile_id:
                         Intent intent;
                         intent = new Intent(getApplicationContext(), ProfileActivity.class);
+                        intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
                         startActivity(intent);
                         break;
 
                     case R.id.home_id:
                         Intent intent1;
                         intent1 = new Intent(getApplicationContext(), MapsActivity.class);
+                        intent1.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
                         startActivity(intent1);
                 }
                 return false;

@@ -4,8 +4,11 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.provider.MediaStore;
+import android.support.annotation.NonNull;
+import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -29,6 +32,29 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         findViewById(R.id.delete_account_id).setOnClickListener(this);
         findViewById(R.id.sign_out_id).setOnClickListener(this);
         findViewById(R.id.editPicButton).setOnClickListener(this);
+        BottomNavigationView bottomNavigationView = (BottomNavigationView)
+                findViewById(R.id.bottomNavigationView);
+
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.profile_id:
+                        Intent intent;
+                        intent = new Intent(getApplicationContext(), ProfileActivity.class);
+                        intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+                        startActivity(intent);
+                        break;
+
+                    case R.id.home_id:
+                        Intent intent1;
+                        intent1 = new Intent(getApplicationContext(), MapsActivity.class);
+                        intent1.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+                        startActivity(intent1);
+                }
+                return false;
+            }
+        });
     }
 
     @Override
