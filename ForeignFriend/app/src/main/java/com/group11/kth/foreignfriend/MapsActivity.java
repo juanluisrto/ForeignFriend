@@ -1,10 +1,8 @@
 package com.group11.kth.foreignfriend;
 
-import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
-import android.location.LocationListener;
 import android.location.LocationManager;
 import android.net.Uri;
 import android.support.annotation.NonNull;
@@ -21,7 +19,6 @@ import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.appindexing.Thing;
 import com.google.android.gms.common.api.GoogleApiClient;
-import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -33,7 +30,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
 
 import android.Manifest;
 
-public class MapsActivity extends FragmentActivity implements OnMapReadyCallback,
+public class MapsActivity extends FragmentActivity implements OnMapReadyCallback, View.OnClickListener,
         GoogleMap.OnMarkerClickListener {
 
     public GoogleMap mMap;
@@ -61,7 +58,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         // See https://g.co/AppIndexing/AndroidStudio for more information.
         client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
         client.connect();
-
+        findViewById(R.id.filter).setOnClickListener((View.OnClickListener) this);
         BottomNavigationView bottomNavigationView = (BottomNavigationView)
                 findViewById(R.id.bottomNavigationView);
 
@@ -196,6 +193,14 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public void goToProfile() {
         Intent intent = new Intent(this, ProfileActivity.class);
         startActivity(intent);
+    }
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.filter:
+                Intent i = new Intent(getApplicationContext(), FilterActivity.class);
+                i.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+                startActivity(i);
+        }
     }
 
 
